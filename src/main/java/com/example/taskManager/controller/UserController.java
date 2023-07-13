@@ -1,5 +1,6 @@
 package com.example.taskManager.controller;
 
+import com.example.taskManager.domain.Task;
 import com.example.taskManager.domain.User;
 import com.example.taskManager.services.UserService;
 import lombok.AllArgsConstructor;
@@ -42,5 +43,10 @@ public class UserController {
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable int id) {
         userService.deleteUser(id);
+    }
+
+    @PostMapping("/taskForUser")
+    public User addTask(@RequestParam int id, @RequestBody Task newTask) {
+        return userService.addTask(id, newTask);
     }
 }
