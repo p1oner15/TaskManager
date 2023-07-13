@@ -1,0 +1,10 @@
+Users endpoints: 
+
+CRUD 
+1. create User, (in: User user) (out: User user)
+2. get User #ID, (in: int id) (out: User user)
+2.1 get Users (in:) (out: List<User>)
+3. update User (in: User user), (out: User user)
+4. delete (in: int id) (out: )
+
+	
